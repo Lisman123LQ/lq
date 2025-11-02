@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Yomira ❤️</title>
+    <style>
+        * {margin:0;padding:0;box-sizing:border-box;}
+        body {
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            min-height:100vh;
+            background:#0a0a0a;
+            overflow-x:hidden;
+            position:relative;
+        }
+        .animated-bg {
+            position:fixed;top:0;left:0;width:100%;height:100%;
+            background:linear-gradient(45deg,#ff0844,#ffb199,#ff006e,#8338ec,#fb5607,#ff006e);
+            background-size:400% 400%;
+            animation:gradientShift 20s ease infinite;
+            opacity:0.95;z-index:1;
+        }
+        @keyframes gradientShift {
+            0%{background-position:0% 50%;}
+            50%{background-position:100% 50%;}
+            100%{background-position:0% 50%;}
+        }
+        .container {
+            position:relative;z-index:10;min-height:100vh;
+            display:flex;flex-direction:column;justify-content:center;align-items:center;
+            padding:40px 20px;
+        }
+        .main-title {
+            font-size:clamp(4rem,12vw,9rem);
+            font-weight:900;color:#fff;text-transform:uppercase;
+            letter-spacing:20px;margin-bottom:20px;text-align:center;
+            text-shadow:0 0 20px rgba(255,255,255,1),
+                         0 0 40px rgba(255,8,68,0.8),
+                         0 0 60px rgba(255,8,68,0.6),
+                         5px 5px 0px rgba(0,0,0,0.3);
+            animation:titleGlow 2s ease-in-out infinite, titleFloat 3s ease-in-out infinite;
+        }
+        @keyframes titleGlow {
+            0%,100%{text-shadow:0 0 20px rgba(255,255,255,1),0 0 40px rgba(255,8,68,0.8);}
+            50%{text-shadow:0 0 60px rgba(255,8,68,1),0 0 90px rgba(255,8,68,0.8);}
+        }
+        @keyframes titleFloat {0%,100%{transform:translateY(0);}50%{transform:translateY(-15px);}}
+        .subtitle {
+            font-size:clamp(1.5rem,4vw,2.5rem);
+            color:#fff;font-weight:300;letter-spacing:5px;margin-bottom:50px;
+            text-shadow:0 0 20px rgba(255,255,255,0.8);
+            animation:fadeInUp 2s ease-in-out;
+        }
+        .heart-container {animation:heartBounce 3s ease-in-out infinite;}
+        @keyframes heartBounce {
+            0%,100%{transform:scale(1) translateY(0);}
+            25%{transform:scale(1.2) translateY(-15px);}
+            50%{transform:scale(1) translateY(0);}
+            75%{transform:scale(1.1) translateY(-8px);}
+        }
+        .glass-heart {
+            font-size:clamp(8rem,20vw,15rem);
+            background:linear-gradient(135deg,rgba(255,255,255,0.4),rgba(255,8,68,0.3));
+            backdrop-filter:blur(15px);
+            border-radius:50%;padding:50px;
+            box-shadow:0 8px 32px rgba(0,0,0,0.4),
+                       inset 0 0 60px rgba(255,255,255,0.3),
+                       0 0 80px rgba(255,8,68,0.6);
+            border:3px solid rgba(255,255,255,0.4);
+            animation:heartGlow 2s ease-in-out infinite;
+        }
+        @keyframes heartGlow {
+            0%,100%{filter:drop-shadow(0 0 30px rgba(255,8,68,0.8));}
+            50%{filter:drop-shadow(0 0 60px rgba(255,8,68,1));}
+        }
+        .message {
+            font-size:clamp(2.5rem,7vw,5rem);
+            font-weight:700;color:#fff;text-align:center;
+            letter-spacing:8px;margin:40px 0;
+            animation:neonFlicker 1.5s infinite alternate;
+            text-shadow:0 0 10px #fff,0 0 20px #fff,0 0 30px #ff0844,0 0 40px #ff0844;
+        }
+        @keyframes neonFlicker {
+            0%,19%,21%,23%,25%,54%,56%,100%{opacity:1;}
+            20%,24%,55%{opacity:0.7;}
+        }
+        .love-breath {
+            font-size:clamp(1.8rem,5vw,3rem);
+            color:#fff;font-weight:bold;margin-top:20px;
+            text-shadow:0 0 20px #ff4d6d;
+            animation:lovePulse 2s infinite ease-in-out;text-align:center;
+        }
+        @keyframes lovePulse {
+            0%,100%{transform:scale(1);text-shadow:0 0 20px #ff4d6d;}
+            50%{transform:scale(1.2);text-shadow:0 0 50px #ff1e56;}
+        }
+        .romantic-phrases {margin-top:50px;max-width:900px;text-align:center;width:100%;padding:0 20px;}
+        .phrase {
+            font-size:clamp(1.3rem,3vw,2.3rem);color:#fff;font-weight:300;letter-spacing:2px;line-height:1.6;
+            text-shadow:0 0 15px rgba(255,255,255,0.8);
+            margin-bottom:30px;padding:20px;
+            background:rgba(255,255,255,0.1);backdrop-filter:blur(10px);
+            border-radius:20px;border:2px solid rgba(255,255,255,0.2);
+            animation:fadeInUp 2s ease-in-out;transition:all 0.3s ease;
+        }
+        .phrase:hover {transform:scale(1.05);background:rgba(255,255,255,0.2);box-shadow:0 0 30px rgba(255,8,68,0.6);}
+        @keyframes fadeInUp {from{opacity:0;transform:translateY(40px);}to{opacity:1;transform:translateY(0);}}
+        .signature {margin-top:60px;text-align:center;}
+        .from-text {
+            font-size:clamp(1.5rem,4vw,3rem);color:#fff;font-weight:300;
+            letter-spacing:4px;text-shadow:0 0 15px rgba(255,255,255,0.8);margin-bottom:20px;
+        }
+        .name {
+            font-size:clamp(2.5rem,6vw,5rem);color:#fff;font-weight:700;letter-spacing:12px;margin-top:15px;
+            text-shadow:0 0 20px #3a86ff,0 0 40px #3a86ff,0 0 60px #3a86ff;
+            animation:nameGlow 2s infinite alternate;
+        }
+        @keyframes nameGlow {from{text-shadow:0 0 20px #3a86ff;}to{text-shadow:0 0 90px #3a86ff;}}
+
+        /* Botón de reproducción opcional */
+        #playMusic {
+            position:fixed;top:20px;left:20px;padding:15px 25px;font-size:1.2rem;
+            background:#ff0844;color:#fff;border:none;border-radius:10px;
+            cursor:pointer;box-shadow:0 0 20px #ff0844;z-index:100;
+            transition:all 0.3s ease;
+        }
+        #playMusic:hover {background:#ff006e;box-shadow:0 0 40px #ff006e;}
+    </style>
+</head>
+<body>
+    <div class="animated-bg"></div>
+
+    <div class="container">
+        <h1 class="main-title">YOMIRA CD</h1>
+        <p class="subtitle">Para la persona más especial.....</p>
+
+        <div class="heart-container">
+            <div class="glass-heart">❤️</div>
+        </div>
+
+        <p class="message">TE QUIERO MUCHO</p>
+        <p class="love-breath">💞 Eres mi universo 💞</p>
+
+        <div class="romantic-phrases">
+            <div class="phrase">💕 Eres la razón de mi sonrisa cada día</div>
+            <div class="phrase">✨ Tu amor ilumina mi vida como las estrellas</div>
+            <div class="phrase">🌹 Contigo cada momento es especial y único</div>
+            <div class="phrase">💖 Eres mi sueño hecho realidad</div>
+            <div class="phrase">🌟 Mi corazón late solo por ti</div>
+        </div>
+
+        <div class="signature">
+            <p class="from-text">Con todo mi cariño,</p>
+            <p class="name">LISMAN LQ</p>
+        </div>
+    </div>
+
+    <!-- Música con autoplay y loop -->
+    <audio id="romanticMusic" autoplay loop>
+        <source src="../mus/solo vivo para amarte Monthy con letra - pjtlvxd.mp3" type="audio/mpeg">
+        Tu navegador no soporta audio.
+    </audio>
+
+    <!-- Botón opcional para controlar la música -->
+    <button id="playMusic">🎵 Pausar / Reproducir música</button>
+
+    <script>
+        const btn = document.getElementById('playMusic');
+        const audio = document.getElementById('romanticMusic');
+
+        btn.addEventListener('click', () => {
+            if(audio.paused){
+                audio.play();
+                btn.textContent = "⏸️ Pausar música";
+            } else {
+                audio.pause();
+                btn.textContent = "🎵 Reproducir música";
+            }
+        });
+    </script>
+</body>
+</html>
+
